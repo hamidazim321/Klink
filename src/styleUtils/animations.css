@@ -1,0 +1,14 @@
+
+.inRight {
+  animation: inRight 0.3s ease-out ;
+}
+
+
+@keyframes inRight {
+  from {
+    transform: translateX(100%); 
+  }
+  to {
+    transform: translateX(0);
+  }
+}
