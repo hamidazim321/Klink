@@ -28,18 +28,19 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-<summary>Front-End</summary>
+  <summary>Front-End</summary>
   <ul>
     <li><a href="https://react.dev/">React</a></li>
-  </ul
+  </ul>
 </details>
 
 <details>
-<summary>Back-End</summary>
+  <summary>Back-End</summary>
   <ul>
     <li><a href="https://firebase.google.com/">Firebase</a></li>
-  </ul
+  </ul>
 </details>
+
 
 
 ### Key Features <a name="key-features"></a>
