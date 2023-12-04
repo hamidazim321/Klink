@@ -16,6 +16,7 @@ import { BsEmojiLaughing } from "react-icons/bs";
 import { IoSend } from "react-icons/io5";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { clean } from "profanity-cleaner";
 
 export default function Inbox() {
   const [messages, setMessages] = useState();
@@ -72,8 +73,9 @@ export default function Inbox() {
       return;
     }
     try {
+      const cleanMsg = clean(myMessage)
       await addDoc(chatroomCol, {
-        message: myMessage,
+        message: cleanMsg,
         sender: username,
         time: serverTimestamp(),
       });
@@ -89,12 +91,12 @@ export default function Inbox() {
   }
 
   return (
-    <Container fluid style={{ height: "100vh"}} className="p-0">
+    <Container fluid style={{ height: "100vh"}} className="p-0 bg-secondary-subtle">
       <Button 
       variant="success" 
       type="button" 
       onClick={() => navigate('/home')}
-      className="w-auto position-fixed text-white fs-4"
+      className="w-auto position-relative start-0 top-0 text-white fs-4"
       >
         <TiArrowBack />
       </Button>
